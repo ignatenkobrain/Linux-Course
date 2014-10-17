@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Fri Oct 17 13:42:41 MSK 2014
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=Linux today and tomorrow.tex
+outputFile=Linux today and tomorrow.pdf
+langSpell=en
+markDer=true
+srcDir=

@@ -1,0 +1,107 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+\usetheme{Hannover}
+\setbeamercovered{transparent}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+
+\usepackage{authoraftertitle}
+
+\title{Linux~Course}
+\subtitle{Linux~today~and~tomorrow}
+\author{Igor~Gnatenko}
+\date{October 17, 2014}
+\subject{Linux~today~and~tomorrow}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\null
+\vfill
+\begin{flushright}
+{\tiny
+This work is licensed under the Creative Commons Attribution-ShareAlike 4.0
+International License.}
+\end{flushright}
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of contents}
+\tableofcontents
+\end{frame}
+
+\section{Linux and you}
+\begin{frame}
+\frametitle<presentation>{Linux and you}
+\end{frame}
+
+\subsection{About you}
+\begin{frame}
+\frametitle{Give me info about you}
+\begin{itemize}
+  \item Name
+  \item Relationship with Linux
+  \item Projects
+  \item Favorite distro
+\end{itemize}
+\end{frame}
+
+\subsection{What do you want?}
+\begin{frame}
+\frametitle{What do you want?}
+Let me know why you are here
+\end{frame}
+
+\section{Linux today and tomorrow}
+\begin{frame}
+\frametitle<presentation>{Linux today and tomorrow}
+\begin{columns}[c]
+\column{.5\textwidth}
+Today
+\begin{itemize}
+  \item X.Org
+  \item upstart/openrc/sysvinit/..
+  \item network-scripts 
+  \item dbus
+  \item OpenLDAP/389DS/..
+\end{itemize}
+\column{.5\textwidth}
+Tomorrow
+\begin{itemize}
+  \item Wayland
+  \item systemd
+  \item NM/systemd-networkd
+  \item kdbus
+  \item FreeIPA/SSSD
+\end{itemize}
+\end{columns}
+\end{frame}
+
+\section*{Questions?}
+\begin{frame}
+\frametitle<presentation>{Questions?}
+\end{frame}
+
+\section*{Thank you!}
+\begin{frame}
+\frametitle<presentation>{Thank you!}
+
+\begin{center}
+See you next Friday (October 24, 2014)\\
+\bigskip
+\MyAuthor\\
+\href{mailto:i.gnatenko.brain@gmail.com}{i.gnatenko.brain@gmail.com}
+\end{center}
+\end{frame}
+
+\end{document}
