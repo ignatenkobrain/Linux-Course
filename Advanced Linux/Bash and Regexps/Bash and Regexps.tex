@@ -1,0 +1,242 @@
+\documentclass{beamer}
+
+\mode<presentation>
+{
+\usetheme{Hannover}
+\setbeamercovered{transparent}
+}
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage[T1]{fontenc}
+
+\usepackage{authoraftertitle}
+
+\usepackage{pst-barcode}
+
+\usepackage{listings}
+\usepackage{color}
+\lstset{
+	keepspaces=true,
+	frame=single,
+	numbers=left,
+	numbersep=5pt,
+	numberstyle=\footnotesize\color{gray},
+	breaklines=true,
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+	basicstyle=\tiny\ttfamily
+}
+\lstdefinestyle{customc}{
+	language=C,
+ 	belowcaptionskip=1\baselineskip,
+ 	basicstyle=\footnotesize\ttfamily,
+ 	keywordstyle=\bfseries\color{green!40!black},
+ 	commentstyle=\itshape\color{purple!40!black},
+ 	identifierstyle=\color{blue},
+ 	stringstyle=\color{orange},
+}
+
+\definecolor{links}{HTML}{2A1B81}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
+\title{Linux~Course}
+\subtitle{Bash~and~Regexps}
+\author{Igor~Gnatenko}
+\date{November 07, 2014}
+\subject{Bash~and~Regexps}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\null
+\vfill
+\begin{flushright}
+{\tiny
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0
+International License\\
+\href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}.}
+\end{flushright}
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of contents}
+\tableofcontents
+\end{frame}
+
+\section{Advanced Bash}
+\begin{frame}
+\frametitle<presentation>{Advanced Bash}
+\end{frame}
+
+\subsection{Quotes}
+\begin{frame}
+\frametitle{Single, double, back quotes}
+\begin{itemize}
+  \item \texttt{'}
+  \item \texttt{"}
+  \item \texttt{`}
+\end{itemize}
+Difference?
+\end{frame}
+
+\subsection{Standard streams}
+\begin{frame}
+\frametitle{Standard streams}
+\begin{itemize}
+  \item stdin
+  \item stdout
+  \item stderr
+\end{itemize}
+\setbeamercovered{invisible}
+\pause
+Magic construction. What it does?\\
+\begin{itemize}
+  \item \texttt{2>\&1}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Programming exmaple (C language)}
+\lstinputlisting[language=C,style=customc]{res/std.c}
+\end{frame}
+
+\subsection{Return codes}
+\begin{frame}
+\frametitle{Return codes}
+\begin{itemize}
+  \item \texttt{0}-\texttt{255}. Otherwise \texttt{mod 256}
+  \item \texttt{\$?}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Demo: example usage}
+\end{frame}
+
+\subsection{Pipes, ampersands}
+\begin{frame}
+\frametitle{Pipes, ampersands}
+\begin{itemize}
+  \item \texttt{|}
+  \item \texttt{\&}
+  \item \texttt{||}
+  \item \texttt{\&\&}
+\end{itemize}
+Difference?
+\end{frame}
+
+\begin{frame}
+\frametitle{Demo: example usage}
+\end{frame}
+
+\subsection{Sorting and filtering}
+\begin{frame}
+\frametitle{Sorting and filtering}
+\begin{itemize}
+  \item sort
+  \item uniq
+\end{itemize}
+\end{frame}
+
+\subsection{Advanced Bash-Scripting Guide}
+\begin{frame}
+\frametitle{Advanced Bash-Scripting Guide}
+\begin{center}
+  \href{http://tldp.org/LDP/abs/abs-guide.pdf}{http://tldp.org/LDP/abs/abs-guide.pdf}
+\end{center}
+\end{frame}
+
+\section{Regular Expressions}
+\begin{frame}
+\frametitle<presentation>{Regular Expressions}
+\end{frame}
+
+\subsection{Software}
+\begin{frame}
+\frametitle{Software}
+\begin{itemize}
+  \item sed
+  \item awk
+  \item bash
+  \item grep
+  \item \ldots
+\end{itemize}
+\end{frame}
+
+\subsection{Basic}
+\begin{frame}
+\frametitle{Basic}
+\begin{itemize}
+  \item \texttt{.}
+  \item \texttt{*}
+  \item \texttt{\^}
+  \item \texttt{\$}
+  \item \texttt{[0-9]}, \texttt{[a-zA-Z]}, \texttt{[\^\ a]}
+  \item \texttt{\{n\}}, \texttt{\{m,n\}}
+  \item \ldots
+\end{itemize}
+\end{frame}
+
+\subsection{Try it yourself!}
+\begin{frame}
+\frametitle{The intern-tester @ Yandex}
+\lstinputlisting{res/ya1.txt}
+\begin{itemize}
+  \item requests cout for each second
+  \item count of 5xx HTTP-codes 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{The load testing expert @ Yandex}
+\lstinputlisting{res/ya2.txt}
+\begin{itemize}
+  \item top-3 referers, from what opened service main page (\texttt{/}) or page
+  with weather forecast in Moscow (\texttt{/moscow}) and it's count
+  \item in what time 95\% requests (response time -- last column in lines) for
+  weather forcast in Kiev (\texttt{/kiev}) was happened
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Online examples}
+\begin{center}
+  \href{http://regexone.com}{http://regexone.com}
+\end{center}
+\end{frame}
+
+\section*{Questions?}
+\begin{frame}
+\frametitle<presentation>{Questions?}
+\end{frame}
+
+\section*{Feedback please}
+\begin{frame}
+\frametitle<presentation>{Feedback please}
+\begin{center}
+\begin{pspicture}(2in,2in)
+  \psbarcode{http://goo.gl/forms/SkEaFu1iWD}{version=10 eclevel=H}{qrcode}
+\end{pspicture}
+\href{http://goo.gl/forms/SkEaFu1iWD}{http://goo.gl/forms/SkEaFu1iWD}
+\end{center}
+\end{frame}
+
+\section*{Thank you!}
+\begin{frame}
+\frametitle<presentation>{Thank you!}
+
+\begin{center}
+See you next Friday (November 14, 2014)
+\vfill
+\MyAuthor\\
+\href{mailto:i.gnatenko.brain@gmail.com}{i.gnatenko.brain@gmail.com}
+\end{center}
+\end{frame}
+
+\end{document}
+

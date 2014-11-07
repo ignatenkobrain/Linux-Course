@@ -1,0 +1,3 @@
+[10/Jul/2010:00:13:18 +0400] pogoda.yandex.ru 2.2.2.2 "GET /chernigov HTTP/1.1" 200 "http://www.yandex.ua/" "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)" 113
+[10/Jul/2010:00:13:19 +0400] pogoda.yandex.ru 3.3.3.3 "GET /russia HTTP/1.1" 200 "http://pogoda.yandex.ru/27612/choose/" "Opera/9.52 (Windows NT 6.0; U; MRA 5.5 (build 02842); ru)" 119
+[10/Jul/2010:00:13:20 +0400] pogoda.yandex.ru 5.5.5.6 "GET / HTTP/1.1" 302 "http://www.yandex.ru/" "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; InfoPath.2)" 203
